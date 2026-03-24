@@ -1,0 +1,57 @@
+## Dependencies
+node_modules/
+
+## Build outputs
+build/
+dist/
+.cache/
+.parcel-cache/
+
+## Coverage and test output
+coverage/
+.nyc_output/
+
+## Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+## Runtime files
+*.pid
+*.seed
+*.pid.lock
+
+## Environment files (keep secrets out of git)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+## TypeScript cache
+*.tsbuildinfo
+
+## Package manager directories
+.pnpm-store/
+.npm/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+## IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+## OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+Prema Consulting Company Profile.pdf
+Prema Consulting Company Profile.pptx
