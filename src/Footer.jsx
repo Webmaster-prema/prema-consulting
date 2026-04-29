@@ -104,7 +104,7 @@ const Footer = () => {
                 <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Mail className="w-4 h-4 text-primary" />
                 </div>
-                <a href="mailto:info@prema-consulting.com" className="text-slate-400 hover:text-primary transition-colors text-sm">info@prema-consulting.com</a>
+                <a href="mailto:info@prema-consulting.net" className="text-slate-400 hover:text-primary transition-colors text-sm">info@prema-consulting.net</a>
               </li>
 
               <li className="border-t border-slate-800/60 pt-3 text-slate-300 text-xs uppercase tracking-wider font-semibold">Iraq Office</li>
@@ -124,7 +124,7 @@ const Footer = () => {
                 <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Mail className="w-4 h-4 text-primary" />
                 </div>
-                <a href="mailto:info@prema-consulting.com" className="text-slate-400 hover:text-primary transition-colors text-sm">info@prema-consulting.com</a>
+                <a href="mailto:info@prema-consulting.net" className="text-slate-400 hover:text-primary transition-colors text-sm">info@prema-consulting.net</a>
               </li>
             </ul>
           </div>
