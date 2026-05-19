@@ -109,7 +109,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <a
-                href="mailto:info@prema-consulting.com"
+                href="mailto:info@prema-consulting.net"
                 className="ml-4 bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold font-sans transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-[0.9375rem]"
               >
                 Get in Touch
@@ -152,7 +152,7 @@ const Navbar = () => {
               ))}
               <div className="pt-3 px-4">
                 <a
-                  href="mailto:info@prema-consulting.com"
+                  href="mailto:info@prema-consulting.net"
                   className="block py-3 bg-primary text-white text-center rounded-full font-semibold font-sans hover:bg-primary-dark transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                   role="menuitem"
