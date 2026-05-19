@@ -209,7 +209,7 @@ const PartnersPage = () => {
             Join our growing network of strategic technology partners
           </p>
           <a
-            href="mailto:info@prema-consulting.com"
+            href="mailto:info@prema-consulting.net"
             className="inline-block bg-white text-cyan-500 px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
           >
             Get in Touch
