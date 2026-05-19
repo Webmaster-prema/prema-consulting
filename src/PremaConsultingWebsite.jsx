@@ -595,7 +595,7 @@ const PremaConsultingWebsite = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="mailto:info@prema-consulting.com" 
+              href="mailto:info@prema-consulting.net" 
               className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-full font-bold text-base transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
             >
               Get in Touch <ArrowRight size={18} />
