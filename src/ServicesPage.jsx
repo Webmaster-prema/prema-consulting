@@ -192,7 +192,7 @@ const ServicesPage = () => {
             Let's discuss how our services can help your institution modernize, optimize, and grow. Our team of banking and technology experts is ready to partner with you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:info@prema-consulting.com" className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/25">
+            <a href="mailto:info@prema-consulting.net" className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/25">
               <Mail className="w-5 h-5" /> Contact Our Team
             </a>
             <Link to="/solutions" className="inline-flex items-center justify-center gap-2 border-2 border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300">
