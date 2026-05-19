@@ -333,7 +333,7 @@ const SolutionsPage = () => {
             Let's discuss how our solutions can help your institution achieve digital excellence. Our team of experts is ready to tailor a solution for your specific needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:info@prema-consulting.com" className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/25">
+            <a href="mailto:info@prema-consulting.net" className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/25">
               <Mail className="w-5 h-5" /> Contact Our Team
             </a>
             <Link to="/" className="inline-flex items-center justify-center gap-2 border-2 border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300">
