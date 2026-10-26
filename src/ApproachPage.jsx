@@ -326,7 +326,7 @@ const ApproachPage = () => {
               </div>
               <div>
                 <h3 className="font-bold text-slate-900">Proven Track Record</h3>
-                <p className="text-sm text-slate-500">20+ successful implementations across the region</p>
+                <p className="text-sm text-slate-500">30+ successful implementations across the region</p>
               </div>
             </div>
           </div>

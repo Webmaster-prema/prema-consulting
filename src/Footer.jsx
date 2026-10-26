@@ -23,7 +23,7 @@ const Footer = () => {
             {/* Social proof mini-stats */}
             <div className="flex gap-6">
               <div>
-                <div className="text-2xl font-bold text-white">20+</div>
+                <div className="text-2xl font-bold text-white">30+</div>
                 <div className="text-xs text-slate-500 uppercase tracking-wider">Projects</div>
               </div>
               <div>

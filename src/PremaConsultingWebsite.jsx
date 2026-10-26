@@ -326,8 +326,8 @@ const PremaConsultingWebsite = () => {
             </div>
             <div className="grid grid-cols-2 gap-5">
               {[
-                { number: "20+", label: "Successful Projects", icon: <CheckCircle className="w-5 h-5" strokeWidth={1.5} /> },
-                { number: "50+", label: "Expert Consultants", icon: <Users className="w-5 h-5" strokeWidth={1.5} /> },
+                { number: "30+", label: "Successful Projects", icon: <CheckCircle className="w-5 h-5" strokeWidth={1.5} /> },
+                { number: "90+", label: "Expert Consultants", icon: <Users className="w-5 h-5" strokeWidth={1.5} /> },
                 { number: "10+", label: "Years of Experience", icon: <TrendingUp className="w-5 h-5" strokeWidth={1.5} /> },
                 { number: "14+", label: "Strategic Partners", icon: <Globe className="w-5 h-5" strokeWidth={1.5} /> }
               ].map((stat, index) => (
