@@ -131,8 +131,17 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-slate-800/60 pt-8 text-center">
+        <div className="border-t border-slate-800/60 pt-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-6">
           <p className="text-slate-500 text-sm">&copy; {new Date().getFullYear()} Prema Consulting. All rights reserved.</p>
+
+          {/* Trust badge */}
+          <Link to="/#security" className="transition-transform duration-300 hover:scale-105">
+            <img
+              src="/badges/iso-27001-certified.svg"
+              alt="ISO/IEC 27001 Certified — Information Security Management"
+              className="w-24 h-24"
+            />
+          </Link>
         </div>
       </div>
     </footer>

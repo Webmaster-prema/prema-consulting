@@ -580,6 +580,43 @@ const PremaConsultingWebsite = () => {
         </div>
       </section>
 
+      {/* Security & Compliance Section */}
+      <section id="security" className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute -top-32 -left-32 w-[480px] h-[480px] bg-primary/[0.05] rounded-full blur-3xl" aria-hidden="true"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+            {/* Seal */}
+            <div className="lg:col-span-2 flex justify-center">
+              <div className="relative w-72 h-72 sm:w-80 sm:h-80 flex items-center justify-center">
+                <div className="absolute inset-0 rounded-full border border-primary/10" aria-hidden="true"></div>
+                <div className="absolute inset-6 rounded-full border border-dashed border-primary/20" aria-hidden="true"></div>
+                <div className="absolute inset-12 rounded-full bg-gradient-to-br from-primary/10 to-emerald-400/10 blur-xl" aria-hidden="true"></div>
+                <img
+                  src="/badges/iso-27001-certified.svg"
+                  alt="ISO/IEC 27001 Certified — Information Security Management"
+                  className="relative w-52 h-52 sm:w-56 sm:h-56 drop-shadow-[0_20px_40px_rgba(0,169,224,0.25)]"
+                />
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="lg:col-span-3">
+              <span className="section-label">Security &amp; Compliance</span>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
+                ISO/IEC 27001 <span className="gradient-text">Certified</span>
+              </h2>
+              <p className="text-lg text-slate-600 leading-relaxed mb-10 max-w-2xl">
+                Financial institutions trust us with critical systems and sensitive data. Our information security management system is independently certified to ISO/IEC 27001, the international standard for protecting information.
+              </p>
+
+              <a href="mailto:info@prema-consulting.net?subject=ISO%2027001%20Certificate%20Request" className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-300">
+                Request a copy of our certificate <ArrowRight size={18} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section id="contact" className="py-24 gradient-bg relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" aria-hidden="true">
