@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* ===== Global Resets & Typography ===== */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+/* Fonts are loaded from index.html with preconnect, so they don't block on this stylesheet. */
 
 :root {
   --primary: #00A9E0;
@@ -250,6 +250,32 @@ p + p { margin-top: 1em; }
 
 .slide-up {
   animation: slideUp 0.6s ease-out;
+}
+
+/* Homepage hero entrance: pure CSS so content shows on first paint without waiting for JS. */
+.hero-enter {
+  animation: heroEnter 1s ease-out both;
+}
+
+.hero-enter-scale {
+  animation: heroEnterScale 1.2s ease-out both;
+}
+
+@keyframes heroEnter {
+  from { opacity: 0; transform: translateY(2rem); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes heroEnterScale {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter,
+  .hero-enter-scale {
+    animation: none;
+  }
 }
 
 @keyframes fadeIn {

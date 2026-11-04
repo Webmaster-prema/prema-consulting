@@ -3,8 +3,11 @@ import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight, Cpu, Users, TrendingUp, Monitor, Lightbulb, CheckCircle, ChevronRight, Mail, Clock, Target, Award } from 'lucide-react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import usePageMeta from './usePageMeta';
 
 const ApproachPage = () => {
+  usePageMeta('/approach');
+
   const location = useLocation();
 
   useEffect(() => {

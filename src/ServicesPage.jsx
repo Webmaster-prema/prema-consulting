@@ -3,8 +3,11 @@ import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight, Shield, Cpu, Users, Zap, Globe, CheckCircle, ChevronRight, Mail } from 'lucide-react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import usePageMeta from './usePageMeta';
 
 const ServicesPage = () => {
+  usePageMeta('/services');
+
   const location = useLocation();
 
   useEffect(() => {

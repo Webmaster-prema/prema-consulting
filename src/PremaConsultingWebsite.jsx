@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ArrowRight, ArrowUp, Shield, Cpu, Users, TrendingUp, Zap, Globe, Monitor, Lightbulb, CheckCircle, Phone } from 'lucide-react';
+import { ArrowRight, ArrowUp, BadgeCheck, Landmark, Shield, ShieldCheck, Cpu, Users, TrendingUp, Zap, Globe, Monitor, Lightbulb, CheckCircle, Phone } from 'lucide-react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import FaqList from './FaqList';
+import faqs from './faqData';
+import usePageMeta from './usePageMeta';
 
 const PremaConsultingWebsite = () => {
   const location = useLocation();
+
+  usePageMeta('/');
 
   useEffect(() => {
     if (location.hash) {
@@ -102,13 +107,7 @@ const PremaConsultingWebsite = () => {
     { name: "Arizona Intelligent Solutions", logo: "/partners/arizona.png", description: "Founded in 2017 in Amman, Jordan, specializing in advanced digital transformation technologies with emphasis on paperless processes and automated auditing." }
   ];
 
-  const [heroReady, setHeroReady] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
-
-  useEffect(() => {
-    const t = setTimeout(() => setHeroReady(true), 100);
-    return () => clearTimeout(t);
-  }, []);
 
   // Scroll-to-top visibility
   useEffect(() => {
@@ -142,22 +141,20 @@ const PremaConsultingWebsite = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 relative z-10">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              {/* Trust badge */}
-              <div className={`inline-flex items-center gap-2 bg-white/[0.06] backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 mb-8 transition-all duration-1000 ease-out ${heroReady ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '100ms' }}>
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span className="text-sm text-slate-300 font-medium">Trusted by 20+ financial institutions across MENA</span>
-              </div>
-
-              <h1 className={`text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] transition-all duration-1000 ease-out ${heroReady ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '200ms' }}>
-                Where Banking Meets<br />
-                <span className="gradient-text bg-gradient-to-r from-primary to-blue-400">What's Next</span>
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+            <div className="lg:col-span-7">
+              <h1 className="font-bold text-white tracking-tight leading-[1.08] text-[2.5rem] sm:text-5xl md:text-[2.75rem] xl:text-[3.5rem] mb-7 hero-enter" style={{ animationDelay: '100ms' }}>
+                <span className="inline-flex items-center gap-2.5 bg-white/[0.06] backdrop-blur-sm border border-white/10 rounded-2xl sm:rounded-full px-4 py-2 mb-8 text-xs sm:text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">
+                  <span className="w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_rgba(0,169,224,0.8)]"></span>
+                  Prema Consulting · FinTech Services Provider
+                </span>
+                <span className="block lg:whitespace-nowrap">Core &amp; Digital Banking</span>
+                <span className="block lg:whitespace-nowrap gradient-text bg-gradient-to-r from-primary to-blue-400 pb-1">Transformation for MENA</span>
               </h1>
-              <p className={`text-xl text-slate-300 mb-10 leading-relaxed max-w-xl transition-all duration-1000 ease-out ${heroReady ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '400ms' }}>
-                We help banks modernize core systems, launch digital channels, and operationalize emerging technology — <strong className="text-white">faster, with less risk.</strong>
+              <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-xl hero-enter" style={{ animationDelay: '300ms' }}>
+                We help banks and financial institutions across the Middle East and North Africa modernize core banking, launch digital channels and run them securely on Temenos — <strong className="text-white font-semibold">faster, with less risk.</strong>
               </p>
-              <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 ease-out ${heroReady ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '600ms' }}>
+              <div className="flex flex-col sm:flex-row gap-4 hero-enter" style={{ animationDelay: '500ms' }}>
                 <a href="#services" className="btn-primary text-base px-8 py-4">
                   Explore Our Services <ArrowRight size={18} />
                 </a>
@@ -165,10 +162,24 @@ const PremaConsultingWebsite = () => {
                   About Prema
                 </a>
               </div>
+
+              {/* Credentials */}
+              <ul className="flex flex-wrap gap-x-8 gap-y-3 mt-12 pt-8 border-t border-white/10 hero-enter" style={{ animationDelay: '700ms' }}>
+                {[
+                  { icon: <ShieldCheck className="w-5 h-5" strokeWidth={1.75} />, label: "ISO/IEC 27001 certified" },
+                  { icon: <BadgeCheck className="w-5 h-5" strokeWidth={1.75} />, label: "Certified Temenos partner" },
+                  { icon: <Landmark className="w-5 h-5" strokeWidth={1.75} />, label: "20+ financial institutions" },
+                ].map((item) => (
+                  <li key={item.label} className="flex items-center gap-2.5 text-sm font-medium text-slate-300">
+                    <span className="text-primary">{item.icon}</span>
+                    {item.label}
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* Premium SVG Illustration */}
-            <div className={`relative hidden md:flex items-center justify-center transition-all duration-1200 ease-out ${heroReady ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`} style={{ transitionDelay: '300ms' }} aria-hidden="true">
+            <div className="relative hidden lg:flex lg:col-span-5 items-center justify-center hero-enter-scale" style={{ animationDelay: '300ms' }} aria-hidden="true">
               <svg viewBox="0 0 500 500" className="w-full max-w-lg" xmlns="http://www.w3.org/2000/svg">
                 {/* Outer glow ring */}
                 <circle cx="250" cy="250" r="200" fill="none" stroke="url(#ringGrad)" strokeWidth="1" opacity="0.3">
@@ -318,11 +329,14 @@ const PremaConsultingWebsite = () => {
                 Empowering <span className="gradient-text">Digital Transformation</span>
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-4">
-                Prema Consulting is a leading FinTech Services company in the MENA region, empowering financial institutions to achieve their digital transformation goals. We leverage technology to unlock new possibilities for Banks, FinTech companies, and more.
+                Prema Consulting is a FinTech services provider for the banking and finance sector in the Middle East and North Africa (MENA). We provide transformation services for core banking and digital banking to banks, financial institutions and FinTech companies.
               </p>
-              <p className="text-base text-slate-500 leading-relaxed">
-                We drive disruptive change, foster innovation, and deliver exceptional customer experiences — helping institutions modernize operations and stay ahead in a rapidly evolving financial landscape.
+              <p className="text-base text-slate-500 leading-relaxed mb-6">
+                Headquartered in Amman, Jordan, with an office in Baghdad, Iraq, we implement and operate Temenos Transact (T24) and Temenos Infinity, and support banks with managed IT services and cyber security — from the first assessment through to operations after go-live.
               </p>
+              <Link to="/about" className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-300">
+                More about Prema Consulting <ArrowRight size={18} />
+              </Link>
             </div>
             <div className="grid grid-cols-2 gap-5">
               {[
@@ -613,6 +627,27 @@ const PremaConsultingWebsite = () => {
                 Request a copy of our certificate <ArrowRight size={18} />
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-24 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="section-label mx-auto">FAQ</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
+              Frequently Asked <span className="gradient-text">Questions</span>
+            </h2>
+            <p className="text-lg text-slate-500 max-w-2xl mx-auto">
+              Core banking and digital banking transformation in the Middle East, explained.
+            </p>
+          </div>
+          <FaqList items={faqs.filter((item) => item.featured)} openFirst />
+          <div className="flex justify-center mt-10">
+            <Link to="/faq" className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/25">
+              View All Questions <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>

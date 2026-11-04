@@ -3,8 +3,11 @@ import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight, Shield, Cpu, Users, TrendingUp, Zap, Globe, Monitor, Lightbulb, CheckCircle, ChevronRight, Mail } from 'lucide-react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import usePageMeta from './usePageMeta';
 
 const SolutionsPage = () => {
+  usePageMeta('/solutions');
+
   const [activeFilter, setActiveFilter] = useState("All");
   const location = useLocation();
 

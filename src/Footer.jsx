@@ -18,7 +18,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-slate-400 mb-6 leading-relaxed text-[0.9375rem]">
-              A Premier FinTech Services Company empowering digital transformation across the MENA region.
+              A FinTech services provider for banks and financial institutions across the Middle East and North Africa, specializing in core banking and digital banking transformation.
             </p>
             {/* Social proof mini-stats */}
             <div className="flex gap-6">
@@ -47,7 +47,8 @@ const Footer = () => {
                 { to: "/approach", label: "Our Approach" },
                 { to: "/solutions", label: "Solutions" },
                 { to: "/partners", label: "Partners" },
-                { to: "/#about", label: "About Us" },
+                { to: "/about", label: "About Us" },
+                { to: "/faq", label: "FAQ" },
               ].map((link) => (
                 <li key={link.to}>
                   <Link to={link.to} className="text-slate-400 hover:text-primary transition-colors text-[0.9375rem]">

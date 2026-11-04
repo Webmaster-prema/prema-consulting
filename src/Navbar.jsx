@@ -7,13 +7,13 @@ const navLinks = [
   { to: "/approach", label: "Our Approach" },
   { to: "/solutions", label: "Solutions" },
   { to: "/partners", label: "Partners" },
-  { to: "/#about", label: "About Us" },
+  { to: "/about", label: "About Us" },
+  { to: "/faq", label: "FAQ" },
 ];
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [aboutInView, setAboutInView] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -24,48 +24,15 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Track whether the #about section is visible on the homepage
-  useEffect(() => {
-    if (location.pathname !== '/') {
-      setAboutInView(false);
-      return;
-    }
-    const el = document.getElementById('about');
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => setAboutInView(entry.isIntersecting),
-      { threshold: 0.3 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [location.pathname]);
-
-  // Clear #about hash when scrolling away so the URL stays clean
-  useEffect(() => {
-    if (location.pathname === '/' && location.hash === '#about' && !aboutInView) {
-      window.history.replaceState(null, '', '/');
-    }
-  }, [aboutInView, location.pathname, location.hash]);
-
   // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [location]);
 
-  const isActive = (link) => {
-    if (link.to.startsWith('/#')) return location.pathname === '/' && aboutInView;
-    return location.pathname === link.to;
-  };
+  const isActive = (link) => location.pathname === link.to;
 
-  const handleNavClick = (link) => {
+  const handleNavClick = () => {
     setMobileMenuOpen(false);
-    if (link.to.startsWith('/#') && location.pathname === '/') {
-      const id = link.to.replace('/#', '');
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
   };
 
   return (
@@ -97,7 +64,7 @@ const Navbar = () => {
                 <Link
                   key={link.to}
                   to={link.to}
-                  onClick={() => handleNavClick(link)}
+                  onClick={handleNavClick}
                   className={`nav-link px-4 py-2 rounded-lg font-sans tracking-wide transition-colors ${
                     isActive(link)
                       ? `text-primary font-semibold`
@@ -138,7 +105,7 @@ const Navbar = () => {
                 <Link
                   key={link.to}
                   to={link.to}
-                  onClick={() => handleNavClick(link)}
+                  onClick={handleNavClick}
                   className={`block px-4 py-3 rounded-xl font-sans tracking-wide transition-colors ${
                     isActive(link)
                       ? 'text-primary font-semibold bg-primary/5'
