@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# Prema Consulting website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React + Vite site for [prema-consulting.net](https://prema-consulting.net). Requires Node.js 20.19 or newer.
 
-## Available Scripts
+## Scripts
 
-In the project directory, you can run:
+- `npm run dev` (or `npm start`): development server at http://localhost:3000
+- `npm run build`: production build in `build/`
+- `npm run preview`: serve the production build locally
 
-### `npm start`
+## How the build works
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+`npm run build` runs three steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. `vite build` bundles the app into `build/`.
+2. `vite build --ssr src/entry-server.jsx` bundles a server renderer into `build-ssr/` (temporary).
+3. `scripts/prerender.mjs` renders every route to static HTML: `build/index.html`, `build/<route>.html` and `build/404.html`. Each page gets its own title, description, canonical URL and structured data, so search engines and AI crawlers that don't run JavaScript see the full content.
 
-### `npm test`
+## Where things live
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `src/routeMeta.js`: page titles and descriptions. Add a new route here **and** in `src/App.jsx` so it is pre-rendered.
+- `src/faqData.js`: FAQ questions and answers. The FAQ structured data is generated from this file at build time.
+- `public/sitemap.xml`, `public/robots.txt`, `public/llms.txt`: crawler files. Update the sitemap and `llms.txt` when pages are added.
+- `vercel.json`: Vercel settings. `cleanUrls` serves `build/faq.html` at `/faq`; unknown URLs get `build/404.html` with a 404 status.

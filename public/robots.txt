@@ -1,3 +1,7 @@
 # https://www.robotstxt.org/robotstxt.html
+# All crawlers, including AI assistants and AI search (GPTBot, OAI-SearchBot,
+# ChatGPT-User, ClaudeBot, Claude-SearchBot, PerplexityBot, Google-Extended), are welcome.
 User-agent: *
-Disallow:
+Allow: /
+
+Sitemap: https://prema-consulting.net/sitemap.xml

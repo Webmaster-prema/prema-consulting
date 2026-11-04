@@ -1,0 +1,44 @@
+# Prema Consulting
+
+> Prema Consulting is a FinTech services provider for the banking and finance sector in the Middle East and North Africa (MENA). It provides transformation services for core banking (Temenos Transact / T24) and digital banking (Temenos Infinity), plus managed IT services, cyber security and banking technology consultancy.
+
+## Key facts
+
+- Category: FinTech services / banking technology consulting
+- Region served: Middle East and North Africa
+- Headquarters: Amman, Jordan (Abdulla Ghousheh Street, Al-Husseini Complex, 4th Floor)
+- Other office: Baghdad, Iraq (Core Business Building, Karrada, near Kahramana Square)
+- Experience: 10+ years, 30+ projects, 20+ financial institutions
+- Team: 90+ consultants
+- Certifications: ISO/IEC 27001 (information security management); certified Temenos partner
+- Platforms: Temenos Transact (T24), Temenos Infinity, Temenos Payments Hub (TPH), Temenos Financial Crime Mitigation (FCM – AML), Oracle
+- Contact: info@prema-consulting.net, +962 6 581 8929 (Jordan), +964 785 757 5751 (Iraq)
+
+## Services
+
+- [Core Banking Transformation](https://prema-consulting.net/services#core-banking-transformation): legacy assessment and roadmap, Temenos Transact (T24) implementation and upgrades, data migration and reconciliation, process optimization, regulatory compliance.
+- [Digital Banking Services](https://prema-consulting.net/services#digital-banking-services): mobile and web banking for retail and corporate customers on Temenos Infinity, including UX/UI design, backend development and API integration.
+- [Managed IT Services](https://prema-consulting.net/services#managed-it-services): Temenos Transact operations, Close of Business (COB) processing, job monitoring, database administration, backup and restore, 24/7 monitoring.
+- [Cyber Security](https://prema-consulting.net/services#cyber-security): SOC as a Service, security assessments, threat detection, incident response, banking security compliance (with partners).
+- [Consultancy Services](https://prema-consulting.net/services#consultancy-services): digital transformation strategy, banking process re-engineering, technology architecture assessment.
+
+## Solutions
+
+Digital customer onboarding and eKYC, customer identification, biometric verification, digital signature verification, enterprise signatory management, loan origination, transaction auditing (TAS), enterprise content management, digital archiving, AI chatbots, personal finance management. See https://prema-consulting.net/solutions
+
+## Partners
+
+Temenos, Oracle, XPI, KOBIL, 01 Systems, BankCube, Advanced Financial Solutions, QuanTech, Banknbox, ILA Group, Hysab Kytab, Arizona Intelligent Solutions. See https://prema-consulting.net/partners
+
+## Reference pages
+
+- [About Prema Consulting](https://prema-consulting.net/about): company facts and the drivers of banking transformation in the Middle East.
+- [FAQ](https://prema-consulting.net/faq): 15 questions on core banking, Temenos, data migration and provider selection.
+- [Our approach](https://prema-consulting.net/approach): how Prema Consulting shortens time to market.
+
+## White papers
+
+- [The Rise of Digital Banking](https://prema-consulting.net/whitepapers/the-rise-of-digital-banking.pdf)
+- [Empowering Digital Banking with RTGS and ACH](https://prema-consulting.net/whitepapers/empowering-digital-banking-with-rtgs-and-ach.pdf)
+- [Transforming Customer Acquisition with Digital Onboarding](https://prema-consulting.net/whitepapers/transforming-customer-acquisition-with-digital-onboarding.pdf)
+- [Navigating the Landscape of Digital Wallets](https://prema-consulting.net/whitepapers/navigating-the-landscape-of-digital-wallets.pdf)

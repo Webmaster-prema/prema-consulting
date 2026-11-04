@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Globe } from 'lucide-react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import usePageMeta from './usePageMeta';
 
 const PartnersPage = () => {
+  usePageMeta('/partners');
 
   useEffect(() => {
     window.scrollTo(0, 0);
